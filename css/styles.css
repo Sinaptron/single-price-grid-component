@@ -1,0 +1,164 @@
+/* ----- Fuente ----- */
+  @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+/*   ### Tipografia   */
+* {
+--Font size: 16px;
+--Family: Karla;
+--Weights: 400, 700;
+}
+
+* {
+
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+
+	--cyan: hsl(179, 62%, 43%);
+	--bright-Yellow: hsl(71, 73%, 54%);
+	--light-Gray: hsl(204, 43%, 93%);
+}
+
+body {
+
+	font-family: 'Karla', sans-serif;
+	display: grid;
+	place-items: center;
+	background: var(--light-Gray);
+}
+
+.container {
+	display: grid;
+	grid-template-columns: repeat(1fr, 1fr);
+	margin: 20% 8%;
+	box-shadow: 0 2px 4px 1px rgb(58, 58, 58);
+	border-radius: 15px;
+}
+
+#caritem1 {
+	background: #fff;
+	padding: 22px;
+	border-radius: 15px 15px 0 0;
+}
+
+#caritem1 h1 {
+	color: var(--cyan);
+	margin-bottom: 20px;
+	font-weight: 700;
+	font-size: 20px;
+}
+
+#caritem1 h4 {
+	color: var(--bright-Yellow);
+	margin-bottom: 20px;
+}
+
+#caritem1 p {
+	color: #aeaeae;
+	line-height: 24px;
+}
+
+#caritem2 {
+	background: var(--cyan);
+	padding: 22px;
+}
+
+#caritem2 h3 {
+	color: #fff;
+	font-size: 20px;
+	font-weight: 700;
+	margin-bottom: 15px;
+}
+
+#caritem2 h4 {
+	font-weight: 400;
+	font-size: 15px;
+	color: var(--light-Gray);
+	margin-bottom: 10px;
+}
+
+#caritem2 h4 span {
+	color: #fff;
+	font-size: 25px;
+	font-weight: 700;
+	margin-right: 7px;
+}
+
+#caritem2 p {
+	color: #fff;
+	font-size: 16px;
+	margin-bottom: 23px;
+}
+
+#caritem2 a {
+	text-decoration: none;
+	color: #fff;
+	font-weight: 700;
+	display: block;
+	text-align: center;
+	padding: 12px 0;
+	border: 1px solid var(--light-Gray);
+	border-radius: 10px;
+	transition: 0.2s ease-in-out;
+}
+
+#caritem2 a:hover {
+	background: hsl(71, 75%, 71%);
+	color: hsl(71, 0%, 47%);
+}
+
+#caritem3 {
+	background: hsl(179, 50%, 55%);
+	padding: 22px;
+	border-radius: 0 0 15px 15px;
+}
+
+#caritem3 h3 {
+	color: #fff;
+	font-weight: 700;
+	font-size: 21px;
+	margin-bottom: 20px;
+}
+
+#caritem3 p {
+	color: var(--light-Gray);
+	line-height: 25px;
+	font-weight: 400;
+}
+
+@media screen and (min-width: 750px) {
+
+	.container {
+		grid-template-areas: 'caritem1 caritem1'
+							 'caritem2 caritem3';
+		margin: 15% 18%;
+	}
+
+	#caritem1 {
+		grid-area: caritem1;
+		padding: 30px;
+	}
+
+	#caritem1 p {
+		margin-right: 55px;
+	}
+
+	#caritem2 {
+		grid-area: caritem2;
+		border-radius: 0 0 0 15px;
+	}
+
+	#caritem2 a {
+		width: 90%;
+		margin-top: 10%;
+	}
+
+	#caritem3 {
+		grid-area: caritem3;
+		border-radius: 0 0 15px 0;
+		padding-right: 100px;
+	}
+}
